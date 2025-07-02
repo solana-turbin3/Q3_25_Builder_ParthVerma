@@ -1,0 +1,10 @@
+airdrop/dev-wallet.json
+airdrop/Turbin3-wallet.json
+rust/dev-wallet.json
+rust/Turbin3-wallet.json
+
+airdrop/node_modules/
+airdrop/yarn.lock
+
+rust/Cargo.lock
+rust/target/
