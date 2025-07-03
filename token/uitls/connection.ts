@@ -1,16 +1,16 @@
-import { Connection, PublicKey , Commitment} from "@solana/web3.js";
+import { Connection, PublicKey, Commitment } from "@solana/web3.js";
 import dotenv from 'dotenv';
 import * as fs from "fs";
-import path  from "path";
+import path from "path";
 
 dotenv.config();
 
-export const establishConnection = async() => {
-    const commitment: Commitment = "confirmed";
-    const rpc = process.env.RPC || "";
-    const connection = new Connection(rpc, commitment);
+export const establishConnection = async () => {
+  const commitment: Commitment = "confirmed";
+  const rpc = process.env.RPC || "";
+  const connection = new Connection(rpc, commitment);
 
-    return connection;
+  return connection;
 }
 
 export const rpc = process.env.RPC || "";

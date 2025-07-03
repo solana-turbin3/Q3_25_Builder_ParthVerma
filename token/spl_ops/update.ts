@@ -11,6 +11,7 @@ import {
   publicKey,
 } from "@metaplex-foundation/umi";
 import { rpc, mintKey } from "../uitls/connection";
+import base58 from "bs58";
 
 function main() {
   const mint = publicKey(mintKey);
@@ -40,9 +41,13 @@ function main() {
         isMutable: true,
       });
 
-      await updateTx.sendAndConfirm(umi);
+      const result = await updateTx.sendAndConfirm(umi);
+      const signature = base58.encode(result.signature);
 
-      console.log("Successfully updated the metadata", updateTx);
+      console.log("Successfully updated the metadata", signature);
+      console.log(
+        `🔗 Explorer: https://explorer.solana.com/tx/${signature}?cluster=devnet`
+      );
     } catch (error) {
       console.log("Failed to update the metadata: ", error);
     }
