@@ -1,0 +1,29 @@
+{
+  "name": "token",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "keygen": "ts-node ./tools/new-key.ts",
+    "airdrop": "ts-node ./tools/airdrop.ts",
+    "init": "ts-node ./spl_ops/spl_init.ts",
+    "meta": "ts-node ./spl_ops/spl_metadata.ts",
+    "mint": "ts-node ./spl_ops/spl_mint.ts",
+    "transfer": "ts-node ./spl_ops/spl_transfer.ts",
+    "update": "ts-node ./spl_ops/update.ts"
+  },
+  "author": "Parth",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.2.0",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "bs58": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "dotenv": "^17.0.1"
+  }
+}
